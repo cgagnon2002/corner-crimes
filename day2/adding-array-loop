@@ -1,0 +1,39 @@
+/* These are the gobal variables. They are used often. That's why they are global variables. */
+var x = 0;
+var y = 0;
+var loop = 0;
+
+/* The math values of five pairs of user chosen integers will be displayed in the console. */
+while (loop < 5) {
+  x = parseInt(prompt("Choose a value for x."));
+  y = parseInt(prompt("Choose a value for y."));
+  
+  var array = [x, y, add(), subtract(), multiply(), divide()];
+  console.log(array);
+  
+  loop++;
+}
+
+/* This function adds x and y. */
+function add() {
+  let z = x + y;
+  return z;
+}
+
+/* This function subtracts y from x. */
+function subtract() {
+  let z = x - y;
+  return z;
+}
+
+/* This function multiplys x and y. */
+function multiply() {
+  let z = x * y;
+  return z;
+}
+
+/* Thes function divides x by y. */
+function divide() {
+  let z = x / y;
+  return z;
+}
