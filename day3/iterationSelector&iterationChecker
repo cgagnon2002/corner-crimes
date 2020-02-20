@@ -1,0 +1,62 @@
+/* These are the global variables. They are used often. That's why they are global variables. */
+var x = 0;
+var y = 0;
+var loop = 0;
+var iter = 0;
+var checked = null;
+
+/* Selects the number of repeats, calls the repeat checker */
+while (checked != true) {
+  iter = parseInt(prompt("Choose a number of number sets to mathify. (Between 1 and 10)"));
+  checked = check(iter);
+}
+
+/* The math values of five pairs of user chosen integers will be displayed in the console. */
+while (loop < iter) {
+  x = parseInt(prompt("Choose a value for x."));
+  y = parseInt(prompt("Choose a value for y."));
+  
+  var array = [x, y, add(), subtract(), multiply(), divide()];
+  console.log(array);
+  
+  loop++;
+}
+
+/* Makes sure the number of repeats is between 1 and 10 */
+function check(iter) {
+	if (iter > 10) { 
+  	alert("Invalid number.");
+  	return false;
+  }
+  else if (iter < 0) {
+  	alert("Inavalid number.");
+  	return false;
+  }
+  else {
+  	return true;
+  }
+}
+
+/* This function adds x and y. */
+function add() {
+  let z = x + y;
+  return z;
+}
+
+/* This function subtracts y from x. */
+function subtract() {
+  let z = x - y;
+  return z;
+}
+
+/* This function multiplies x and y. */
+function multiply() {
+  let z = x * y;
+  return z;
+}
+
+/* This function divides x by y. */
+function divide() {
+  let z = x / y;
+  return z;
+}
