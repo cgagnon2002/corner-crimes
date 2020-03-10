@@ -1,0 +1,32 @@
+var x = parseInt(prompt("Input a value for X."));
+var y = parseInt(prompt("Input a value for Y."));
+var operate = prompt("Choose a mathimatical operator. (+, -, x, /)");
+var ans = 0;
+
+check(operate);
+
+function check(op) {
+	switch (op) {
+  	case "+": {
+    		ans = x + y;
+        console.log(x+" + "+y+" = "+ans);
+        break;
+    }
+    case "-": {
+    		ans = x - y;
+        console.log(x+" - "+y+" = "+ans);
+        break;
+    }
+    case "x": {
+    		ans = x * y;
+        console.log(x+" x "+y+" = "+ans);
+        break;
+    }
+    case "/":
+    case "\\": {
+    		ans = x / y;
+        console.log(x+" / "+y+" = "+ans);
+        break;
+    }
+  }
+}
