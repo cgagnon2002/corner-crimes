@@ -1,3 +1,5 @@
+/* Chloe Galyean */
+
 /* Global variables */
 var x = parseInt(prompt("Input a value for X."));
 var y = parseInt(prompt("Input a value for Y."));
